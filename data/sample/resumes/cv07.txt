@@ -1,0 +1,8 @@
+Mehdi Benjelloun
+Full-stack Developer
+mehdi.benjelloun@example.com
+Experience: 4 years.
+- Node.js and Express REST APIs, React frontends
+- MongoDB, Docker, Git
+- Some Python scripting
+Skills: JavaScript, TypeScript, Node.js, Express, React, MongoDB, Docker, Git, Python

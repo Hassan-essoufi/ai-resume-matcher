@@ -1,0 +1,8 @@
+Imane El Fassi
+Backend Developer
+imane.elfassi@example.com | +212 600 000 006
+Experience: 5 years of backend development.
+- Designed REST APIs with FastAPI and Django in Python
+- PostgreSQL, Redis caching, Docker, Kubernetes on AWS
+- CI/CD with GitHub Actions, unit tests with pytest
+Skills: Python, FastAPI, Django, PostgreSQL, Redis, Docker, Kubernetes, AWS, Git, CI/CD, pytest

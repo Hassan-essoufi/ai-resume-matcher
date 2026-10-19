@@ -1,0 +1,8 @@
+Leila Ouazzani
+MLOps Engineer
+leila.ouazzani@example.com
+Experience: 5 years.
+- Deployed machine learning models with Docker, Kubernetes and FastAPI
+- MLflow, DVC, CI/CD with GitHub Actions, AWS
+- Python, scikit-learn, some PyTorch
+Skills: Python, Docker, Kubernetes, FastAPI, MLflow, DVC, CI/CD, AWS, scikit-learn, PyTorch, machine learning

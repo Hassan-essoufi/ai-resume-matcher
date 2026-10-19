@@ -1,0 +1,8 @@
+Machine Learning Engineer
+We are looking for a Machine Learning Engineer to build and deploy NLP and LLM features.
+Requirements:
+- 3+ years of experience in machine learning
+- Strong Python, PyTorch and scikit-learn
+- Experience with LLMs, RAG and vector databases
+- Deploying models with Docker and FastAPI
+Nice to have: Kubernetes, MLflow, AWS is a plus

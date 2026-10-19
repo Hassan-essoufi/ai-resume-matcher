@@ -1,0 +1,8 @@
+Data Analyst
+Join our business intelligence team to turn data into decisions.
+Requirements:
+- 2 years of experience as a data analyst
+- SQL, Excel and Power BI
+- Statistics and data visualization
+- Python with pandas
+Bonus: Tableau, dbt

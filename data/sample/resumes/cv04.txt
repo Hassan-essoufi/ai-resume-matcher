@@ -1,0 +1,8 @@
+Nadia Berrada
+Data Analyst
+nadia.berrada@example.com | +212 600 000 004
+Experience: 3 years as data analyst in retail.
+- Built Power BI dashboards and Excel reports for management
+- Wrote SQL queries on PostgreSQL, statistics and data visualization
+- Automated reports with Python and pandas; some Tableau
+Skills: SQL, Excel, Power BI, Tableau, Python, pandas, statistics, data visualization

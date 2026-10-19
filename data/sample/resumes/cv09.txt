@@ -1,0 +1,6 @@
+Anas Kettani
+Frontend Developer
+anas.kettani@example.com
+Experience: 3 years.
+- React and Vue.js applications, HTML, CSS, TypeScript
+Skills: React, Vue, HTML, CSS, TypeScript, JavaScript, Git

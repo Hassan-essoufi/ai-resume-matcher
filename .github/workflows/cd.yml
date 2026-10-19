@@ -1,0 +1,80 @@
+# CD: on every push to main (or a version tag v*):
+#   1. build the Docker image and push it to GitHub Container Registry (ghcr.io)
+#   2. deploy to your server over SSH: pull the new image, restart, run the smoke test
+#
+# Required repository secrets for the deploy step (Settings > Secrets > Actions):
+#   DEPLOY_HOST, DEPLOY_USER, DEPLOY_SSH_KEY, DEPLOY_PATH (e.g. /opt/resume-matcher)
+# Without them, the image is still built and pushed; deployment is skipped.
+name: CD
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    uses: ./.github/workflows/ci.yml
+
+  build-and-push:
+    needs: tests
+    runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.meta.outputs.image }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: meta
+        run: echo "image=ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ steps.meta.outputs.image }}:latest
+            ${{ steps.meta.outputs.image }}:${{ github.sha }}
+            ${{ startsWith(github.ref, 'refs/tags/') && format('{0}:{1}', steps.meta.outputs.image, github.ref_name) || '' }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+    steps:
+      - name: Skip if no server configured
+        if: env.DEPLOY_HOST == ''
+        run: echo "No DEPLOY_HOST secret set, skipping deployment (image was pushed)."
+      - name: Deploy over SSH
+        if: env.DEPLOY_HOST != ''
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            cd "${{ secrets.DEPLOY_PATH }}"
+            git pull --ff-only
+            export IMAGE=${{ needs.build-and-push.outputs.image }}:${{ github.sha }}
+            sed -i "s|^IMAGE=.*|IMAGE=$IMAGE|" .env
+            docker compose pull api ui
+            docker compose up -d --no-build --remove-orphans --wait
+            docker compose exec -T api python scripts/smoke_test.py http://localhost:8000
+            docker image prune -f

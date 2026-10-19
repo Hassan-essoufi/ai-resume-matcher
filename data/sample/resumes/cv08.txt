@@ -1,0 +1,7 @@
+Hajar Lahlou
+Java Backend Engineer
+hajar.lahlou@example.com
+Experience: 6 years.
+- Spring Boot microservices in Java, PostgreSQL, Kafka
+- Docker, Kubernetes, Jenkins CI/CD
+Skills: Java, Spring Boot, PostgreSQL, Kafka, Docker, Kubernetes, Jenkins, Git, microservices

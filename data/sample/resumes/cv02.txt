@@ -1,0 +1,8 @@
+Salma Idrissi
+Data Scientist
+salma.idrissi@example.com | +212 600 000 002
+Experience: 3 years.
+- Built deep learning models in PyTorch and TensorFlow for computer vision
+- Machine learning with scikit-learn and XGBoost, statistics
+- Python, pandas, numpy; some Docker
+Skills: Python, PyTorch, TensorFlow, scikit-learn, pandas, Docker, statistics

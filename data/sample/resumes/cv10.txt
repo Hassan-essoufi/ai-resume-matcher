@@ -1,0 +1,7 @@
+Rim Alaoui
+Data Engineer
+rim.alaoui@example.com
+Experience: 4 years.
+- ETL pipelines with Airflow and Spark, dbt models
+- SQL on PostgreSQL, Python, Docker
+Skills: Python, SQL, Spark, Airflow, dbt, PostgreSQL, Docker, ETL

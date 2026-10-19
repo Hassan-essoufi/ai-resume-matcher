@@ -1,0 +1,7 @@
+Youssef Amrani
+Junior AI Developer
+youssef.amrani@example.com
+Experience: 1 year (internships).
+- Internship: chatbot with LLM and RAG using ChromaDB and LangChain
+- Python, FastAPI, Git
+Skills: Python, LLM, RAG, ChromaDB, LangChain, FastAPI, Git

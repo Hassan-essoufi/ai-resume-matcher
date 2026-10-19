@@ -1,0 +1,8 @@
+Karim Tazi
+Machine Learning Engineer
+karim.tazi@example.com | +212 600 000 001
+Experience: 4 years building ML systems.
+- Built RAG assistant with LangChain, Qdrant and GPT models (LLM)
+- Trained PyTorch and scikit-learn models for NLP classification
+- Deployed models with FastAPI and Docker on AWS, tracked with MLflow
+Skills: Python, PyTorch, scikit-learn, NLP, LLM, RAG, Qdrant, FastAPI, Docker, AWS, MLflow

@@ -1,0 +1,7 @@
+Omar Chraibi
+Business Intelligence Analyst
+omar.chraibi@example.com
+Experience: 2 years.
+- Tableau and Excel dashboards, SQL on MySQL
+- Data visualization and KPI reporting
+Skills: Tableau, Excel, SQL, MySQL, data visualization

@@ -1,0 +1,9 @@
+Backend Python Developer
+You will design and maintain REST APIs for our platform.
+Requirements:
+- 4 years of backend development
+- Python with FastAPI or Django
+- PostgreSQL, Redis
+- Docker, Git and CI/CD
+- Unit testing with pytest
+Preferred: Kubernetes, AWS

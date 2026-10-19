@@ -1,0 +1,6 @@
+{
+  "_comment": "Graded relevance 0-3 for the fictional sample data (3 = ideal candidate). Add your own jobs/resumes and labels to make the evaluation stronger.",
+  "ml_engineer.txt":    {"cv01.txt": 3, "cv12.txt": 2, "cv02.txt": 2, "cv03.txt": 1, "cv06.txt": 1},
+  "data_analyst.txt":   {"cv04.txt": 3, "cv05.txt": 2, "cv10.txt": 1, "cv02.txt": 1},
+  "backend_python.txt": {"cv06.txt": 3, "cv08.txt": 1, "cv07.txt": 1, "cv12.txt": 1, "cv03.txt": 1}
+}
