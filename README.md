@@ -1,8 +1,5 @@
 # AI Resume Matcher
 
-[![CI](https://github.com/Hassan-essoufi/resume-matcher/actions/workflows/ci.yml/badge.svg)](https://github.com/Hassan-essoufi/resume-matcher/actions/workflows/ci.yml)
-[![CD](https://github.com/Hassan-essoufi/resume-matcher/actions/workflows/cd.yml/badge.svg)](https://github.com/Hassan-essoufi/resume-matcher/actions/workflows/cd.yml)
-
 AI Resume Matcher ranks candidates against a job description and explains every score.
 
 Upload a job description and a batch of resumes (PDF, DOCX or TXT). The system removes personal data, extracts a structured profile from each document with an LLM, shortlists candidates by semantic similarity, and scores each one with a transparent formula. Every ranked candidate comes with a short explanation a recruiter can act on.
